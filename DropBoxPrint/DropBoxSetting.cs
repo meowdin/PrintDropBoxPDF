@@ -38,6 +38,18 @@ namespace DropBoxPrint
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!(Common.settings.AccessToken.Length > 0))
+            {
+                MessageBox.Show("Please click start to initilize Authen first!");
+                return;
+            }
+
+
+            if (!textBox1.Text.StartsWith("/"))
+            {
+                MessageBox.Show("Folder must strats with / ");
+                return;
+            }
             Common.settings.DropBoxFolder = textBox1.Text;
             parent.lblFolder.Text = Common.settings.DropBoxFolder;
             Common.SaveSetting();
@@ -49,14 +61,14 @@ namespace DropBoxPrint
             if (!(Common.settings.AccessToken.Length>0))
             {
                 MessageBox.Show("Please click start to initilize Authen first!");
-
+                return;
             }
 
 
             if (!textBox1.Text.StartsWith("/"))
             {
                 MessageBox.Show("Folder must strats with / ");
-
+                return;
             }
 
             var folderArg = new CreateFolderArg(textBox1.Text);

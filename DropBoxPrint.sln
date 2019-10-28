@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropBoxPrint", "DropBoxPrint\DropBoxPrint.csproj", "{3B05553A-C42F-41C9-A6F5-69E7239B0B07}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DropBoxPrintInstaller", "DropBoxPrintInstaller\DropBoxPrintInstaller.vdproj", "{3D89CEA6-1E8C-4C0A-980F-905B2DA94AF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3B05553A-C42F-41C9-A6F5-69E7239B0B07}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B05553A-C42F-41C9-A6F5-69E7239B0B07}.Release|x86.ActiveCfg = Release|x86
 		{3B05553A-C42F-41C9-A6F5-69E7239B0B07}.Release|x86.Build.0 = Release|x86
+		{3D89CEA6-1E8C-4C0A-980F-905B2DA94AF5}.Debug|Any CPU.ActiveCfg = Debug
+		{3D89CEA6-1E8C-4C0A-980F-905B2DA94AF5}.Debug|x86.ActiveCfg = Debug
+		{3D89CEA6-1E8C-4C0A-980F-905B2DA94AF5}.Release|Any CPU.ActiveCfg = Release
+		{3D89CEA6-1E8C-4C0A-980F-905B2DA94AF5}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

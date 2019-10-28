@@ -81,7 +81,12 @@ namespace DropBoxPrint
 
         private void btnGetList_Click(object sender, EventArgs e)
         {
-         
+            if (!(Common.settings.AccessToken.Length > 0))
+            {
+                MessageBox.Show("Please click setting => Administrative = > start to initilize Authen first!");
+                return;
+            }
+
 
             GetCurrentAccount(Common.client);
 
@@ -137,6 +142,12 @@ namespace DropBoxPrint
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+            if (!(Common.settings.AccessToken.Length > 0))
+            {
+                MessageBox.Show("Please click setting => Administrative = > start to initilize Authen first!");
+                return;
+            }
+
             if (dataFileViews.SelectedRows.Count <= 0)
             {
                 MessageBox.Show("Please select row to print");
