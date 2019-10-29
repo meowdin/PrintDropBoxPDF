@@ -91,13 +91,14 @@ namespace DropBoxPrint
             GetCurrentAccount(Common.client);
 
             var list =  Common.client.Files.ListFolderAsync(Common.settings.DropBoxFolder).Result;
-
-
             List<Metadata> files = list.Entries.Where(i => i.IsFile).ToList();
+
+            while (list.HasMore)
+            {
+                list = Common.client.Files.ListFolderContinueAsync(list.Cursor).Result;
+                files.AddRange(list.Entries.Where(i => i.IsFile));
+            }
             dataFileViews.DataSource = files;
-
-
-
         }
 
         private void Main_Load(object sender, EventArgs e)
